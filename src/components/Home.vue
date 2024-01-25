@@ -47,10 +47,20 @@ export default {
 }
 
 .solo-button,
-.trio-button,
+.trio-button {
+  padding: 10px;
+  font-size: 12px;
+  background-color: gold;
+  color: black; /* Set the text color to ensure visibility */
+  
+}
 .logout-button {
   padding: 10px;
   font-size: 12px;
+  margin-bottom: 100px;
+  background-color: gold;
+  color: black; 
+  
 }
 
 
@@ -60,12 +70,12 @@ export default {
 .logout-button {
  
   
-  
+  margin-left: 170px;
   margin-top: 20px; /* Adjust the top margin as needed */
 }
 
 .spacer {
-  width: 500px; /* Adjust the space between buttons */
+  width: 250px; /* Adjust the space between buttons */
 }
 
 .centered-image {

@@ -5,6 +5,7 @@ import SoloCrate from "./components/SoloCrate.vue";
 import TrioCrate from "./components/TrioCrate.vue";
 import ShoppingCart from "./components/ShoppingCart.vue";
 import ShoppingCart2 from "./components/ShoppingCart2.vue";
+import Thankyou from "./components/Thankyou.vue";
 
 
 
@@ -52,6 +53,11 @@ const routes = [
         name:"ShoppingCart2",
         component: ShoppingCart2,
         path: "/ShoppingCart2",
+    },
+    {
+        name:"Thankyou",
+        component: Thankyou,
+        path: "/Thankyou",
     },
 ];
 

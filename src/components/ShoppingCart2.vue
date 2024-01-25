@@ -50,10 +50,12 @@ export default {
           const addToCartResponse = await axios.post(
             `http://ec2-16-171-230-40.eu-north-1.compute.amazonaws.com/api/ShoppingCart/${this.userId}/add/2`
           );
+          this.$router.push({ name: 'Thankyou' });
         } else {
           this.isLoggedIn = false;
           this.loginError = "Invalid username or password";
         }
+       
       } catch (error) {
         this.isLoggedIn = false;
         this.loginError = "Invalid username or password";
@@ -67,6 +69,10 @@ export default {
       this.userId = null;
       this.username = "";
       this.password = "";
+    },
+
+    GoToThankYou() {
+      this.$router.push({ name: 'Thankyou' });
     },
 
     GoToSignUp() {
@@ -88,6 +94,11 @@ export default {
   text-align: center;
   margin-top: 20px;
 }
+.container button{
+  color: black;
+  background-color: gold;
+
+}
 
 .centered-image {
   display: block;
@@ -106,6 +117,7 @@ export default {
 }
 
 .input-group {
+  width: 100%;
   margin-bottom: 15px;
 }
 
@@ -136,5 +148,8 @@ button {
 .error-msg {
   color: #ff0000;
   margin-top: 10px;
+}
+h2{
+  color: gold;
 }
 </style>

@@ -87,9 +87,12 @@ export default{
           <label for="password">Password:</label>
           <input type="text" v-model="password" id="password" placeholder="Enter your password">
         </div>
+        <div class="Login-group">
         <button v-on:click="login">Login</button>
+      </div>
+      <div class="SignUp-group">
         <button v-on:click="GoToSignUp">Sign Up</button>
-       
+      </div>
         <p v-if="loginError" class="error-msg">{{ loginError }}</p>
       </div>
 
@@ -100,19 +103,28 @@ export default{
   </div>
 </template>
 
-<style scoped>
+<style>
+
+body, html {
+  background-color: black; /* Set the background color to black for the entire screen */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 50vh;
+  
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: gold;
+
 }
 .buttons-container {
   display: flex;
@@ -128,6 +140,18 @@ export default{
 
 .input-group {
   margin-bottom: 10px;
+  
+}
+.Login-group button{
+  color: black;
+  background-color: gold;
+  margin-bottom: 10px;
+
+}
+.SignUp-group button{
+   color: black;
+  background-color: gold;
+
 }
 
 .error-msg {
@@ -138,8 +162,10 @@ export default{
 
 h1 {
   text-align: center;
-  margin-left: 100px;
-  margin-bottom: 50px;
+  margin-left: 15px;
+
+  margin-bottom: 10px;
+  color: gold;
 }
 button#logout-button {
   margin-top: 190px; /* Adjust the top margin to move it lower */
@@ -150,6 +176,8 @@ button#logout-button {
   width: 200px; /* Adjust the width as needed */
   height: 200px; /* Adjust the height as needed */
   display: inline-block;
-  margin: 0 auto; /* This centers the image horizontally */
+  margin-bottom: 0px;
 }
+
+
 </style>

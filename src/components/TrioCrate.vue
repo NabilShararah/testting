@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <img src="../assets/Trio.jpg" class="centered-image" style="width: 350px; height: 350px;" />
+    <h1>Price 70$</h1>
     
     <button v-on:click="GoToShoppingCart2" class="cart-button">Order</button>
     <button v-on:click="GoToHome" class="logout-button">Back</button>
@@ -55,6 +56,11 @@ export default {
   flex-direction: column;
   align-items: center;
   margin-top: 20px; /* Adjust the top margin as needed */
+}
+.container button{
+  color: black;
+  background-color: gold;
+
 }
 
 .cart-button {
